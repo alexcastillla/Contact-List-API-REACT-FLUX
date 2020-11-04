@@ -3,9 +3,8 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const Modal = props => {
-	const [state, setState] = useState({
-		//initialize state here
-	});
+	const [state, setState] = useState({});
+
 	return (
 		<div className="modal" tabIndex="-1" role="dialog" style={{ display: props.show ? "inline-block" : "none" }}>
 			<div className="modal-dialog" role="document">
@@ -41,20 +40,13 @@ export const Modal = props => {
 		</div>
 	);
 };
-/**
- * Define the data-types for
- * your component's properties
- **/
+
 Modal.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
 	show: PropTypes.bool
 };
 
-/**
- * Define the default values for
- * your component's properties
- **/
 Modal.defaultProps = {
 	show: false,
 	onClose: null
